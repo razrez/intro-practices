@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option csharp_namespace = "Chat.Grpc";
+package chat;
+
+service Chat {
+  // Join Method returns JWT token
+  rpc Authorize(User) returns (AuthorizeResponse);
+  rpc ChatMessaging(stream Message) returns (stream Message);
+}
+
+message User {
+  string name = 1;
+}
+
+message AuthorizeResponse {
+  int32 statusCode = 1;
+  string info = 2;
+  string token = 3;
+}
+
+message Message {
+  string user = 1;
+  string text = 2;
+}
+
