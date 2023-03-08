@@ -3,20 +3,20 @@ using Chat.Grpc;
 
 namespace Chat.Grpc.Services;
 
-public class GreeterService : Greeter.GreeterBase
+public class ChatService : Chat.ChatBase
 {
-    private readonly ILogger<GreeterService> _logger;
+    private readonly ILogger<ChatService> _logger;
 
-    public GreeterService(ILogger<GreeterService> logger)
+    public ChatService(ILogger<ChatService> logger)
     {
         _logger = logger;
     }
 
-    public override Task<HelloReply> SayHello(HelloRequest request, ServerCallContext context)
+    public override Task<MessageReply> SayHello(MessageRequest request, ServerCallContext context)
     {
-        return Task.FromResult(new HelloReply
+        return Task.FromResult(new MessageReply
         {
-            Message = "Hello " + request.Name
+            Message = request.Message
         });
     }
 }
