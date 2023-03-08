@@ -12,11 +12,4 @@ public class ChatService : Chat.ChatBase
         _logger = logger;
     }
 
-    public override Task<MessageReply> SayHello(MessageRequest request, ServerCallContext context)
-    {
-        return Task.FromResult(new MessageReply
-        {
-            Message = request.Message
-        });
-    }
 }

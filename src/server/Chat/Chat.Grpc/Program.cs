@@ -1,4 +1,5 @@
 using Chat.Grpc.Services;
+using Grpc.Net.Client;
 
 var builder = WebApplication.CreateBuilder(args);
 
