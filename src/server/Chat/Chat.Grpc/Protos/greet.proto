@@ -36,13 +36,3 @@ message JoinResponse {
 message ReceiveMsgRequest {
   string user = 1;
 }
-
-// The request message containing the user's name.
-message MessageRequest {
-  string message = 1;
-}
-
-// The response message containing the greetings.
-message MessageReply {
-  string message = 1;
-}
