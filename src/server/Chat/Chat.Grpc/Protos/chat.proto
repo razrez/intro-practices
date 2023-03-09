@@ -14,9 +14,7 @@ message User {
 }
 
 message AuthorizeResponse {
-  int32 statusCode = 1;
-  string info = 2;
-  string token = 3;
+  string token = 1;
 }
 
 message Message {

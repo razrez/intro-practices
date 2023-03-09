@@ -5,7 +5,6 @@ namespace Chat.Grpc.Models;
 
 public class ChatRoom
 {
-
     private ConcurrentDictionary<string, IServerStreamWriter<Message>> _users = new();
 
     public void Join(string name, IServerStreamWriter<Message> response) => _users.TryAdd(name, response);
