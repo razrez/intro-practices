@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">IntentTutorial</string>
+    <string name="try_button">try to repeat</string>
+    <string name="inputText">Enter code</string>
+    <string name="secret">super secret information</string>
+</resources>
