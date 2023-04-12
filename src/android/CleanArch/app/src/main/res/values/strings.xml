@@ -15,4 +15,8 @@
     <string name="first_task">first task</string>
     <string name="second_task">second task</string>
     <string name="paginate">paginate</string>
+    <string name="time_somewhere">get time</string>
+    <string name="pagination_task">pagination task</string>
+    <string name="di_task">DI task</string>
+    <string name="title_activity_my">MyActivity</string>
 </resources>

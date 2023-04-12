@@ -34,6 +34,7 @@ class CleanArchFragment : FragmentBase<FragmentCleanArchBinding, CleanArchViewMo
             val rnd = kotlin.random.Random.nextInt(5,10)
             viewModel.getUsers(rnd)
         }
+
     }
 
     override fun observeData() {

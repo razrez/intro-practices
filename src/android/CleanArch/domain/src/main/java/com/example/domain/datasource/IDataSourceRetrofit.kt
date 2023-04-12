@@ -1,5 +1,6 @@
 package com.example.domain.datasource
 
+import com.example.domain.common.TimeData
 import com.example.domain.common.UserData
 import retrofit2.Call
 import retrofit2.http.GET
@@ -13,4 +14,7 @@ interface IDataSourceRetrofit {
 
     @GET("users")
     fun getUsersData(@Query("_limit") _limit:String): Call<List<UserData>>
+
+    @GET("api/timezone/{region}")
+    fun getTime(@Path("region") region:String): Call<TimeData>
 }
